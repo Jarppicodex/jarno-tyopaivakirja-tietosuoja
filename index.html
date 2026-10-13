@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Jarno työpäiväkirja — tietosuojaseloste</title>
+  <style>
+    body { margin: 0; color: #20252a; background: #fafaf8; font: 17px/1.65 system-ui, sans-serif; }
+    main { max-width: 760px; margin: auto; padding: 40px 24px 72px; }
+    h1 { line-height: 1.2; font-size: 2rem; } h2 { font-size: 1.3rem; margin-top: 2rem; }
+    a { color: #07547d; } .draft { padding: 16px; background: #fff2ca; border-left: 4px solid #966600; }
+    dt { font-weight: 600; } dd { margin: 0 0 12px; } li { margin-bottom: 8px; }
+    footer { border-top: 1px solid #ccc; margin-top: 40px; padding-top: 16px; }
+  </style>
+</head>
+<body>
+<main>
+  <p>Jarno työpäiväkirja</p>
+  <h1>Tietosuojaseloste</h1>
+  <p class="draft"><strong>Rajattu käyttöönottokoe.</strong>
+    Nykyinen sovellus käsittelee yhden käyttäjän keksittyjä koetietoja. Oikeiden työmaiden,
+    asiakkaiden tai työntekijöiden tietojen käsittelyä ei ole vielä otettu käyttöön.</p>
+
+  <h2>Rekisterinpitäjä ja yhteystiedot</h2>
+  <dl>
+    <dt>Rekisterinpitäjä</dt><dd>Sisämaan Sähköpalvelu, Y-tunnus 1596368-6</dd>
+    <dt>Yhteyshenkilö</dt><dd>Jarno Kuitunen</dd>
+    <dt>Tietosuoja-asioiden yhteystieto</dt>
+    <dd><a href="mailto:jarno.kuitunen@sisamaansahkopalvelu.fi">jarno.kuitunen@sisamaansahkopalvelu.fi</a></dd>
+  </dl>
+
+  <h2>Käyttötarkoitus</h2>
+  <p>Jarno työpäiväkirja jäsentää käyttäjän WhatsAppissa lähettämän tekstin työmaapäiväkirjaksi,
+    tuntikirjaukseksi tai sovituksi tulevaksi työksi. Sovellus tallentaa kirjauksen paikalliseen
+    tietokantaan, vie hyväksytyn kirjauksen Google Kalenteriin ja palauttaa käyttäjälle kuittauksen.</p>
+  <p>Käyttötarkoitus on oma työn seuranta ja laskutuksen tuki. Palvelu ei toimi
+    palkanlaskentana tai varsinaisena kirjanpitojärjestelmänä.</p>
+  <p>Rajatussa kokeessa käyttäjän tunnisteiden ja viestitietojen käsittely perustuu
+    rekisterinpitäjän oikeutettuun etuun toteuttaa ja varmistaa oma työpäiväkirjapalvelu.
+    Tulevan yrityskäytön tarkoitus on työtehtävien järjestäminen ja laskutuksen tukeminen;
+    muiden henkilöiden tietojen tarpeellisuus ja käsittelyperuste arvioidaan ennen niiden keräämistä.
+    Tietoja ei käytetä henkilöitä koskeviin automaattisiin oikeusvaikutteisiin päätöksiin.</p>
+
+  <h2>Käsiteltävät tiedot</h2>
+  <p>Vastaanotto käyttää sallittua WhatsApp-lähettäjänumeroa, viestin tunnistetta, aikaleimaa ja tekstiä.
+    Kirjauksessa voivat olla työkohde, työn kuvaus, työajat, tauot, muistiinpanot sekä korjaukset.
+    Lisäksi käsitellään kalenteritapahtuman tunnistetta ja viestin toimituskuittausta.</p>
+  <p>Tiedot saadaan käyttäjän viesteistä. Aiemman kalenterihistorian tuonti ei ole käytössä.
+    Nykyinen koe käsittelee vain erikseen nimettyjä keksittyjä KOE WA-B -kohteita.
+    Ääniviestien käsittely ja jatkuva tuotantokäyttö eivät ole vielä käytössä.</p>
+
+  <h2>Tietojen kulku ja palveluntarjoajat</h2>
+  <ul>
+    <li><strong>Meta / WhatsApp:</strong> välittää viestin ja kuittauksen WhatsApp Business Platformin kautta.</li>
+    <li><strong>Paikallinen avustajasovellus:</strong> säilyttää vastaanottojonon, kirjaukset,
+      korjaushistorian ja vastausjonon rekisterinpitäjän Windows-tietokoneessa.</li>
+    <li><strong>OpenAI / Codex:</strong> tulkitsee viestin tekstin OpenAI:n pilvessä. Tulkintaan
+      välitetään viestin teksti, lähdetunniste ja aika sekä paikalliset aiemmat kirjaukset.
+      Vastaanottajanumeroa tai Meta-/Google-valtuutustunnuksia ei sisällytetä tulkinnan syötteeseen.</li>
+    <li><strong>Google Calendar:</strong> vastaanottaa kirjauksen sisällön sovittuun kalenteriin.</li>
+  </ul>
+  <p>Paikallinen ajo ei tarkoita, että kaikki käsittely tapahtuisi Suomessa tai EU-/ETA-alueella.
+    Palveluntarjoajat käsittelevät tietoja sovellettavien palveluehtojensa ja tietosuojatietojensa
+    mukaisesti. Käytetty Codex-yhteys perustuu henkilökohtaiseen ChatGPT Pro -kirjautumiseen;
+    yritystilauksen tietosuojalupauksia ei sovelleta siihen automaattisesti. Koulutuskäytön asetusten
+    toteumaa ei ole vielä varmennettu. Ennen muiden henkilöiden tietojen käyttöönottoa
+    varmistetaan sopimukset, koulutuskäytön rajoitus ja tarvittavat kansainvälisten siirtojen suojatoimet.
+    Näitä vaatimuksia ei korvata tällä käyttöönottokokeella.</p>
+
+  <h2>Säilytys ja poistaminen</h2>
+  <ul>
+    <li><strong>Raakatekstiviestit:</strong> 90 päivää viestin vastaanottamisesta.</li>
+    <li><strong>Valmiit kirjaukset ja tarpeellinen korjaushistoria:</strong> 6 vuotta kirjausvuoden lopusta.
+      Esimerkiksi vuoden 2026 kirjauksen säilytysaika päättyy 31.12.2032.</li>
+    <li><strong>Käyttöönottokoe:</strong> keksityt kalenterikoemerkinnät poistetaan kokeen jälkeen.
+      Paikallisten koetietojen poisto ja poiston varmennus tehdään kokeen lopetuksessa.</li>
+  </ul>
+  <p>Kuuden vuoden aika on rekisterinpitäjän valitsema käytäntö työn seurannan ja laskutuksen tueksi;
+    se ei määritä erillisen kirjanpitoaineiston lakisääteistä luokittelua. Ajastettua poistoa ei vielä
+    ole käytössä: määräaikojen noudattaminen ja poistopyynnöt hoidetaan tässä vaiheessa ylläpitotoimina.
+    Oikeiden tietojen jatkuva käsittely aloitetaan vasta, kun tietokannan, kalenterin ja varmuuskopioiden
+    määräaikainen poistomenettely on varmennettu.</p>
+  <p>Kalenterimerkinnän peruminen poistaa sen tuntisummista, mutta säilyttää tällä hetkellä paikallisen
+    kirjauksen ja korjaushistorian. Peruminen ei siten yksin poista kaikkia henkilötietoja.
+    Paikallisen tietokannan, kalenterin ja varmuuskopioiden poistomenettely valmistellaan erikseen.</p>
+  <p>Tulevan äänivaiheen alkuperäisten äänitiedostojen sovittu säilytysaika on 30 päivää.
+    Palveluntarjoajien oman käsittelyn säilytysajat määräytyvät niiden sovellettavien ehtojen mukaan;
+    paikallinen poistotoimi ei automaattisesti poista niiden kaikkia kopioita.</p>
+
+  <h2>Suojaus ja käyttöoikeudet</h2>
+  <p>Webhook-yhteys on salattu HTTPS-yhteys. Vastaanotto tarkistaa Metan allekirjoituksen,
+    kohdetilin, kohdenumeron ja sallitun lähettäjän. Palvelun valtuutustunnukset säilytetään
+    Windows DPAPI -salauksella erillisissä paikallisissa varastoissa.
+    Tämä tunnusten suojaus ei tarkoita, että koko SQLite-tietokanta olisi erikseen salattu.</p>
+  <p>Julkisessa webhookissa ei julkaista tietokantaa, kehitysrajapintoja tai laitehallintaa.
+    Tulkintapalvelu ei saa suorittaa viestissä pyydettyjä komentorivi- tai tiedostotoimia.</p>
+
+  <h2>Rekisteröidyn oikeudet</h2>
+  <p>Voit pyytää tietojesi tarkastamista ja korjaamista sekä sovellettavan käsittelyperusteen mukaisesti
+    poistamista, käsittelyn rajoittamista, vastustamista tai tietojen siirtämistä.
+    Jos käsittely perustuu suostumukseen, sen voi peruuttaa.
+    Lähetä pyyntö yllä mainittuun sähköpostiin; henkilöllisyys voidaan varmistaa ennen vastausta.</p>
+  <p>Voit tehdä valituksen <a href="https://tietosuoja.fi/ilmoitus-tietosuojavaltuutetulle">Tietosuojavaltuutetun toimistolle</a>.</p>
+
+  <h2>Selosteen julkaisusivusto</h2>
+  <p>Seloste julkaistaan GitHub Pagesissa. Sivulla ei käytetä omia analytiikka- tai seurantaskriptejä. GitHub voi käsitellä kävijän IP-osoitetta turvallisuustarkoituksiin
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">tietosuojailmoituksensa</a> mukaisesti.</p>
+
+  <footer>Seloste päivitetty 13.10.2026. Käyttötarkoituksen tai tietojen käsittelyn muuttuessa seloste päivitetään ennen muutoksen käyttöönottoa.</footer>
+</main>
+</body>
+</html>
