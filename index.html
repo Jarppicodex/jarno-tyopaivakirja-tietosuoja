@@ -20,7 +20,7 @@
   <h1>Tietosuojaseloste</h1>
   <p class="draft"><strong>Yhden käyttäjän rajattu koekäyttö.</strong>
     Tämä seloste kuvaa omaan työn seurantaan valmisteltua arkipilottia, jossa voi olla
-    oikeita kirjauksia ja tarpeellisia yhteystietoja. Palvelu avataan erillisessä käyttöönotossa.
+    oikeita kirjauksia ja tarpeellisia yhteystietoja. Palvelua käytetään yhden käyttäjän toistaiseksi jatkuvassa koekäytössä.
     Alla kuvataan myös nykyiset suojausrajat ja vielä selvitettävät palveluehdot.</p>
 
   <h2>Rekisterinpitäjä ja yhteystiedot</h2>
@@ -47,7 +47,7 @@
     Tietoja ei käytetä henkilöitä koskeviin automaattisiin oikeusvaikutteisiin päätöksiin.</p>
 
   <h2>Käsiteltävät tiedot</h2>
-  <p>Vastaanotto käyttää sallittua WhatsApp-lähettäjänumeroa, viestin tunnistetta, aikaleimaa ja tekstiä.
+  <p>Vastaanotto käyttää sallittua WhatsApp-lähettäjänumeroa, viestin tunnistetta, aikaleimaa sekä tekstiä tai erikseen avattua ääniviestiä.
     Kirjauksessa voivat olla työkohde, työn kuvaus, työajat, tauot, muistiinpanot sekä korjaukset.
     Arkipilotissa tekstissä voi lisäksi olla henkilöiden nimiä, osoitteita
     ja puhelinnumeroita. Tulkintapolku ei anonymisoi näitä tietoja automaattisesti.
@@ -55,14 +55,15 @@
   <p>Tiedot saadaan käyttäjän viesteistä. Aiemman kalenterihistorian tuonti ei ole käytössä.
     Arkipilotti käyttää tavallisia kohdenimiä eikä edellytä koetunnistetta.
     Tietoja ei hankita automaattisesti muiden henkilöiden keskusteluista tai yhteystietoluetteloista.
-    Ääniviestien käsittely ja jatkuva tuotantokäyttö eivät ole vielä käytössä.</p>
+    Ääniviestien yhden käyttäjän koekäyttö on käytössä toistaiseksi. Laajempi jatkuva tuotantokäyttö ei ole käytössä.</p>
 
   <h2>Tietojen kulku ja palveluntarjoajat</h2>
   <ul>
     <li><strong>Meta / WhatsApp:</strong> välittää viestin ja kuittauksen WhatsApp Business Platformin kautta.</li>
     <li><strong>Paikallinen avustajasovellus:</strong> säilyttää vastaanottojonon, kirjaukset,
       korjaushistorian ja vastausjonon rekisterinpitäjän Windows-tietokoneessa.</li>
-    <li><strong>OpenAI / Codex:</strong> tulkitsee viestin tekstin OpenAI:n pilvessä. Tulkintaan
+    <li><strong>Paikallinen Whisper:</strong> tunnistaa ääniviestin puheen rekisterinpitäjän tietokoneessa. Alkuperäistä ääntä ei lähetetä OpenAI:n puheentunnistuspalveluun. Teknisten tietojen päätelmät näytetään kuittauksessa, ja niitä voi korjata samaan kirjaukseen.</li>
+    <li><strong>OpenAI / Codex:</strong> tulkitsee viestin tekstin, myös äänestä litteroidun tekstin, OpenAI:n pilvessä. Tulkintaan
       välitetään nykyisen viestin teksti ja aika, tarpeellinen avoin luonnos sekä
       aiempien kirjausten kohdistusindeksi (kirjauksen tunniste, kohde, ajat, tyyppi, tila ja versio).
       Muiden kirjausten työselosteita, muistiotekstejä, raakaviestihistoriaa tai alkuperäistä
@@ -119,7 +120,7 @@
     Varmistuksesta palautettu kanta pysyy erillisessä lukitussa tarkistustilassa. Ennen sen
     käyttöönottoa huomioidaan varmistuksen jälkeen tehdyt korjaukset ja poistot, jotta vanhoja
     tietoja ei palauteta vahingossa uudelleen aktiiviseen käyttöön.</p>
-  <p>Tulevan äänivaiheen alkuperäisten äänitiedostojen sovittu säilytysaika on 30 päivää.
+  <p>Ääniviestin paikalliselle kopiolle sovittu säilytysaika on 30 päivää. Litterointi ja päätelmien alkuperäiset puhekatkelmat säilytetään 90 päivää. Normalisoitu, kirjauksen tunnisteeseen ja versioon liitetty päätelmäjälki noudattaa liiketoimintakirjauksen kuuden vuoden säilytystä kirjausvuoden lopusta. Ääni ja raakalitterointi eivät kuulu pitkään liiketoimintavarmistukseen. Puheentunnistuksen PCM- ja tekstivälitiedostot poistetaan käsittelyn jälkeen tai katkon jälkeen seuraavassa huollossa.
     Palveluntarjoajien oman käsittelyn säilytysajat määräytyvät niiden sovellettavien ehtojen mukaan;
     paikallinen poistotoimi ei automaattisesti poista niiden kaikkia kopioita.</p>
 
